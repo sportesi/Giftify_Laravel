@@ -260,7 +260,7 @@ nav .main-nav {
   background-size: cover;
   background-attachment: fixed;
   margin: 0;
-  font-size: 12px;
+  font-size: 10px;
 }
 .registro .container{
   max-width: 900px;
@@ -268,6 +268,9 @@ nav .main-nav {
 }
 .registro h1{
   color: #fff;
+}
+.registro strong{
+font-size: 1.2em;
 }
 .registro .container form{
   background-color: rgba(0, 0, 0, 0.75);
@@ -360,9 +363,6 @@ fieldset{
   .radiusCambiado{
     border-radius: 10px 10px 0 0;
   }
-  div.form-group, div.col-md-6, div.checkbox, div.col-md-8{
-    display: inline;
-  }
   .ion-social-facebook, .ion-social-twitter{
     color: #607d8b;
   }
@@ -453,6 +453,9 @@ span{
   margin: 5px auto;
 }
 
+div.form-group, div.col-md-6, div.col-md-8{
+  display: inline;
+}
 }
 @media (min-width: 850px){
   span{
@@ -545,11 +548,15 @@ span{
       /*HOME*/
         display: block;
     }
+
+    .btn-link{
+      display: block;
+    }
 .second-nav {
       /*HOME*/
         float: right;
         width: 100%;
-        text-align: right;
+        text-align: left;
         padding: 0;
         margin-top: 0;
         margin-top: 10px;
@@ -566,8 +573,9 @@ span{
 .second-nav button{
       margin-top: 5px;
       display: inline;
-      float: left;
+      float: right;
     }
+
 .second-nav{
       float: right;
     }
@@ -609,6 +617,12 @@ span{
   display: inline;
   float: left;
   margin: 0;
+}
+.loginContrasena{
+  float: left;
+}
+.btn-link, .col-md-offset-4{
+  clear: both;
 }
 .ion-ios-cart{
   float: left;

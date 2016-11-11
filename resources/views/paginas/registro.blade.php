@@ -1,14 +1,12 @@
 @extends('base')
  @section('titulo') Registro @endsection
 
-@section('bodyname') registro @endsection
+@section('bodyname')registro @endsection
 
 @section('contenido')
   <form id='register' action='{{ url('/register') }}' method='post' name="form" >
     {{ csrf_field() }}
-    @foreach ($errors->register->all() as $error)
-      - {{$error}}
-    @endforeach
+
       <fieldset>
           <legend>
               <h1>Registro</h1>
@@ -18,21 +16,22 @@
               <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                   <label for="name" class="col-md-4 control-label">Nombre Completo</label>
                   <br>
-                  <input  id="name" type="text" placeholder="Juan" class="typeText" name="name" value="{{ old('name') }}"><br>
-                  <strong style="color: #f00">
-                    @if ($errors->has('name'))
-                            <strong>{{ $errors->first('name') }}</strong>
+                  <input  id="name" type="text" placeholder="Juan" class="typeText" name="name" value="{{ old('name') }}">
+                  <br>
+                    @if ($errors->registro->has('name'))
+                            <strong style="color: #f00">{{ $errors->registro->first('name') }}</strong>
                     @endif
-                  </strong>
               </div>
-
               <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}" >
+                <div class="">
+
+                </div>
                   <label for="email" class="col-md-4 control-label">Mail</label>
                   <br>
                   <input type="text" placeholder="ejemplo@ejemplo.com" class="typeText" name="mail" value="{{ old('email') }}">
                   <br>
-                  @if ($errors->has('name'))
-                          <strong>{{ $errors->first('name') }}</strong>
+                  @if ($errors->registro->has('email'))
+                          <strong style="color: #f00">{{ $errors->registro->first('email') }}</strong>
                   @endif
               </div>
             <div>
@@ -42,8 +41,8 @@
                   <br>
                   <input type="password" class="typeText" placeholder="Contraseña" name="password">
                   <br>
-                  @if ($errors->has('password'))
-                          <strong>{{ $errors->first('password') }}</strong>
+                  @if ($errors->registro->has('password'))
+                          <strong style="color: #f00">{{ $errors->registro->first('password') }}</strong>
                   @endif
               </div>
               <div class="">
@@ -55,15 +54,13 @@
           </div>
               <div class="fechasDeNacimiento">
                   <label>Fecha de nacimiento</label>
-                    <input type="date" name="fecha" value="" class="typeText">
-                    <strong style="color: #f00">
+                    <input type="date" name="date" value="" class="typeText">
+                    @if ($errors->registro->has('date'))
+                            <strong style="color: #f00">{{ $errors->registro->first('date') }}</strong>
+                    @endif
+
               </div>
-              <div class="">
-                  <label>Nombre de Usuario</label>
-                  <br>
-                  <input type="text" placeholder="Nombre de usuario" class="typeText" name="username" value="">
-                  <br>
-              <div class="botones">
+              <div>
                 <br>
                 <button type="submit">Registrarse</button>
                 <button type="reset" name="button"  id="enviar">Borrar</button>
