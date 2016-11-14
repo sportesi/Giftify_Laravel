@@ -28,7 +28,7 @@
                 </div>
                   <label for="email" class="col-md-4 control-label">Mail</label>
                   <br>
-                  <input type="text" placeholder="ejemplo@ejemplo.com" class="typeText" name="mail" value="{{ old('email') }}">
+                  <input type="text" placeholder="ejemplo@ejemplo.com" class="typeText" name="email" value="{{ old('email') }}">
                   <br>
                   @if ($errors->registro->has('email'))
                           <strong style="color: #f00">{{ $errors->registro->first('email') }}</strong>
@@ -54,7 +54,7 @@
           </div>
               <div class="fechasDeNacimiento">
                   <label>Fecha de nacimiento</label>
-                    <input type="date" name="date" value="" class="typeText">
+                    <input type="date" name="date" value="{{ old('date') }}"  class="typeText">
                     @if ($errors->registro->has('date'))
                             <strong style="color: #f00">{{ $errors->registro->first('date') }}</strong>
                     @endif

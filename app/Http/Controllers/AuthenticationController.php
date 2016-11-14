@@ -31,7 +31,6 @@ class AuthenticationController extends Controller
     return view('paginas.registro');
   }
   public function register(Register $request) {
-
     $user = User::create([
       'name' 		=> $request->name,
       'email' 	=> $request->email,
