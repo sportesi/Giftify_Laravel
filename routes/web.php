@@ -17,9 +17,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get("/perfil", "RoutesController@perfil");
 
 Route::get('/registro', 'RoutesController@registro');
+Route::get('/preguntas', 'RoutesController@preguntas');
+
 
 Route::get('login', 'AuthenticationController@showLoginForm')->name('login');
 Route::post('login', 'AuthenticationController@login');
@@ -29,3 +30,4 @@ Route::post('register', 'AuthenticationController@register');
 
 Route::get('logout', 'AuthenticationController@logout')->name('logout');
 // Route::get('/preguntas', 'RoutesController@preguntas')
+Route::get('/NuevoProducto', "RoutesController@crear");

@@ -12,8 +12,8 @@
             </ul>
         </article>
         <article class="social-logos" id="social-logos">
-          <a href="#" class="ion-social-facebook" style="font-size: 9em;"> </a>
-          <a href="#" class="ion-social-twitter" style="font-size: 9em;"> </a>
+          <a href="https://www.facebook.com/Giftify" new class="ion-social-facebook" style="font-size: 9em;"> </a>
+          <a href="https://twitter.com/Giftify" new class="ion-social-twitter" style="font-size: 9em;"> </a>
         </article>
     </section>
 </footer>

@@ -22,7 +22,7 @@ class Guardar extends Migration
             $table->string('photo_4')->nullable();
             $table->string('photo_5')->nullable();
             $table->text('description');
-            $table->itenger
+            // $table->int('id_cathegory');
 
 
 

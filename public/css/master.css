@@ -370,6 +370,14 @@ fieldset{
     color: #00bcd4;
     border-bottom: solid #fff 1px;
   }
+  .crear{
+    font-size: 10px;
+    margin: auto;
+  }
+  .crear .container{
+    margin: auto;
+    max-width: 850px;
+  }
 @media (min-width: 400px) {
     .home .her, .home .him, .home .kids {
       /*HOME*/
