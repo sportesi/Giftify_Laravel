@@ -11,4 +11,7 @@ class RoutesController extends Controller{
     public function registro(){
           return view('paginas.registro');
     }
+    public function perfil(){
+      return view("paginas.perfil");
+    }
 }

@@ -17,6 +17,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get("/perfil", "RoutesController@perfil");
+
 Route::get('/registro', 'RoutesController@registro');
 
 Route::get('login', 'AuthenticationController@showLoginForm')->name('login');
