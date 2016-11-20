@@ -378,6 +378,14 @@ fieldset{
     margin: auto;
     max-width: 850px;
   }
+  .productos{
+    font-size: 10px;
+    margin: auto;
+  }
+  .productos .container{
+    margin: auto;
+    max-width: 850px;
+  }
 @media (min-width: 400px) {
     .home .her, .home .him, .home .kids {
       /*HOME*/

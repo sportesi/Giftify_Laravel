@@ -23,4 +23,7 @@ class RoutesController extends Controller{
     public function preguntas(){
       return view('paginas.preguntas');
     }
+    public function productos(){
+      return view('paginas.productos');
+    }
 }

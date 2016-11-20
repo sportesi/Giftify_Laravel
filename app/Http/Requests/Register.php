@@ -6,7 +6,6 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class Register extends FormRequest
 {
-
   protected $errorBag = 'registro';
   /**
    * Determine if the user is authorized to make this request.
