@@ -8,7 +8,7 @@
   <div class="productoIndividualBox">
 
   <h1>{{ $product->title }}</h1>
-  <img src="{{$product->photo_1}}" alt="" />
+  <img src="/{{$product->photo_1}}" alt="" />
   <p>
     {{  $product->description}}
   </p>
