@@ -4,19 +4,19 @@
 
 @section('bodyname')crear @endsection
 @section('contenido')
-  <div class="">
+  <div class="crearBox">
     <h2>Sube tu producto</h2>
     <form class="" action="" method="post">
       {{ csrf_field() }}
 
       <div class="">
-        <label>Titulo:</label>
-        <input type="input" name="title" value="">
+        <label class="elementosFormulario">Titulo:</label>
+        <input type="input" name="title" value="" class="elementosFormulario">
         @if ($errors->has('title'))
-                <strong style="color: #f00">{{ $errors->first('title') }}</strong>
+                <strong style="color: #f00" class="elementosFormulario">{{ $errors->first('title') }}</strong>
         @endif
         <div class="">
-          <label>Fotos:</label>
+          <label class="elementosFormulario">Fotos:</label>
           <div class="">
             <input type="file" name="foto1" value="">
           </div>
@@ -34,27 +34,27 @@
           </div>
         </div>
         @if ($errors->has('photo_1'))
-                <strong style="color: #f00">{{ $errors->first('photo_1') }}</strong>
+                <strong style="color: #f00" class="elementosFormulario">{{ $errors->first('photo_1') }}</strong>
         @endif
         <div class="">
-          <label>Descripción:</label>
-          <input type="text" name="description" value="">
+          <label class="elementosFormulario">Descripción:</label>
+          <input type="text" name="description" value="" class="elementosFormulario">
 
         </div>
         @if ($errors->has('description'))
-                <strong style="color: #f00">{{ $errors->first('description') }}</strong>
+                <strong style="color: #f00" class="elementosFormulario">{{ $errors->first('description') }}</strong>
         @endif
         <div class="">
-          <label>Categoria:</label>
-          <select class="" name="categorias">
+          <label class="elementosFormulario">Categoria:</label>
+          <select class="elementosFormulario" name="categorias">
             @foreach ($categories as $category)
               <option value="{{ $category->id }}">{{$category->category}}</option>
             @endforeach
           </select>
         </div>
         <div class="">
-          <label>Precio:</label>
-          <input type="text" name="prize" value="">
+          <label class="elementosFormulario">Precio:</label>
+          <input type="text" name="prize" value="" class="elementosFormulario">
         </div>
         <input type="submit" name="name" value="Crear producto">
       </div>

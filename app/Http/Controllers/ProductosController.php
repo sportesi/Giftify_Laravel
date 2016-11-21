@@ -28,8 +28,10 @@ class ProductosController extends Controller
 
     }
     public function showCategories(){
-      $categories = Categories::all();
-      return view('paginas.create', compact('categories'));
+      if (Auth::check()) {
+        $categories = Categories::all();
+        return view('paginas.create', compact('categories'));
+      }
     }
     public function showProductos(){
       $products = Products::all();

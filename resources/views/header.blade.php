@@ -23,7 +23,7 @@
                 <ul class="nav-resp">
                     <li><a href="/">Home</a></li>
                     <li><a href="/registro">Registrarse</a></li>
-                    <li><a href="#">Store</a></li>
+                    <li><a href="/productos">Store</a></li>
                     <li><a href="#">Contact</a></li>
                     <li>
                         <input type="text" name="name" value="">
