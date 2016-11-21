@@ -31,7 +31,16 @@ Route::get('logout', 'AuthenticationController@logout')->name('logout');
 
 Route::get('/NuevoProducto', 'RoutesController@crear');
 Route::post('/NuevoProducto', 'ProductosController@NuevoProducto');
-Route::get('/NuevoProducto', 'ProductosController@showCategories');
+// Route::get('/NuevoProducto', 'ProductosController@showCategories');
 
 Route::get('/productos', 'RoutesController@productos');
 Route::get('/productos', 'ProductosController@showProductos');
+
+Route::get('/MisProductos', 'RoutesController@MisProductos');
+Route::get('/MisProductos', 'ProductosController@showMyProducts');
+
+Route::get('borrarProducto/{id}', 'ProductosController@borrar');
+Route::get('editarProducto/{id}', 'ProductosController@editarMiProducto');
+Route::post('editarProducto/{id}', 'ProductosController@editarProducto');
+
+Route::get('producto/{id}', 'ProductosController@traerUnSoloProducto');

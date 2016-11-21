@@ -20,6 +20,7 @@ class ProductsTableSeeder extends Seeder
         'photo_5' => $request->foto5,
         'description' => $request->description,
         'prize' => $request->prize,
+        'id_category'=> $request->categorias,
         'id_user' => Auth::user()->id,
       ]);
     }

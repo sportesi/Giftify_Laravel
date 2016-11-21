@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Categories;
 
 class RoutesController extends Controller{
     public function index(){
@@ -14,7 +15,8 @@ class RoutesController extends Controller{
     }
     public function crear(){
       if(Auth::check()){
-        return view("paginas.create");
+        $categories = Categories::all();
+        return view('paginas.create', compact('categories'));
 
       }else{
         return "nop,  no podes entrar a esta pagina si no estas logueado";
@@ -25,5 +27,11 @@ class RoutesController extends Controller{
     }
     public function productos(){
       return view('paginas.productos');
+    }
+    public function MisProductos(){
+      return view('paginas.misProductos');
+    }
+    public function editarMiProducto(){
+      return view('paginas.editarProductos');
     }
 }

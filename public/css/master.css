@@ -428,7 +428,31 @@ fieldset{
     align-items: center;
     margin: 7px;
   }
-
+  .productBox .prize{
+    display: block;
+  }
+  .productBox a{
+    display: inline-block;
+    width: 47%;
+    margin: 1%;
+    background-color: #4caf50;
+    padding: 5px;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .productoIndividual{
+    font-size: 10px;
+    margin: auto;
+    background-color: #e2e2e2;
+  }
+  .productoIndividual .container{
+    margin: auto;
+    max-width: 850px;
+  }
+  .productoIndividualBox{
+    background-color: #fff;
+  }
 @media (min-width: 400px) {
     .home .her, .home .him, .home .kids {
       /*HOME*/

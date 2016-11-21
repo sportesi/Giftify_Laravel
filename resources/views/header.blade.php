@@ -2,7 +2,7 @@
 <header>
     <section class="header">
         <article class="logo">
-            <a href="index.php"><img src="imgs/logo2.png" alt="logo" /></a>
+            <a href="index.php"><img src="/imgs/logo2.png" alt="logo" /></a>
         </article>
         <div class="menus">
             <article>
