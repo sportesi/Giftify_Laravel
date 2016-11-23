@@ -11,7 +11,6 @@ use Auth;
 
 class ProductosController extends Controller
 {
-
     public function NuevoProducto(Productos $request){
       $Product = Products::create([
         'title' => $request->title,
@@ -25,9 +24,21 @@ class ProductosController extends Controller
         'prize' =>$request->prize,
         'id_user' => Auth::user()->id,
       ]);
+      $this->storeImages($request);
+    }
 
+    public function storeImages($request){
+      $file = $request->file($request->foto1);
+      dd($file);
+      $extension = $file->extension();
+      $newFilename = uniqid().".".$extension;
+      $folder = "imgsProductos";
+      $path = $request->storeAs($folder, $newFilename, 'public');
+
+      $productos = $folder."/".$newFilename;
 
     }
+
     public function showCategories(){
       if (Auth::check()) {
         $categories = Categories::all();

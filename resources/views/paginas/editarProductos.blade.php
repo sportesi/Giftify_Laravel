@@ -38,7 +38,6 @@
         @endif
         <div class="">
           <label class="elementosFormulario">Descripción:</label>
-          <input type="text" name="description" value="{{ $product->description }}" class="elementosFormulario">
           <textarea name="description" value="{{ $product->description }}" class="elementosFormulario" ></textarea>
 
         </div>

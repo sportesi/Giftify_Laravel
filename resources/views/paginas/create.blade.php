@@ -38,7 +38,7 @@
         @endif
         <div class="">
           <label class="elementosFormulario">Descripción:</label>
-          <input type="text" name="description" value="" class="elementosFormulario">
+          <textarea name="description" value="" class="elementosFormulario" ></textarea>
 
         </div>
         @if ($errors->has('description'))
