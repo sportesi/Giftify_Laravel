@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use \Input as Input;
 use Illuminate\Http\Request;
 use App\Http\Requests\productos;
 use \App\Categories;
@@ -11,33 +12,39 @@ use Auth;
 
 class ProductosController extends Controller
 {
+
     public function NuevoProducto(Productos $request){
+
+      $path1 = $request->foto1->store('imgProductos', 'public');
+      $path2 = $request->foto2->store('imgProductos', 'public');
+      $path3 = $request->foto3->store('imgProductos', 'public');
+      $path4 = $request->foto4->store('imgProductos', 'public');
+      $path5 = $request->foto5->store('imgProductos', 'public');
+
       $Product = Products::create([
         'title' => $request->title,
-        'photo_1' => $request->foto1,
-        'photo_2' => '2',
-        'photo_3' => '3',
-        'photo_4' => '4',
-        'photo_5' => '5',
+        'photo_1' => $path1,
+        'photo_2' => $path2,
+        'photo_3' => $path3,
+        'photo_4' => $path4,
+        'photo_5' => $path5,
         'description' =>$request->description,
         'id_category' =>$request->categorias,
         'prize' =>$request->prize,
         'id_user' => Auth::user()->id,
       ]);
-      $this->storeImages($request);
+      // $this->storeImages($request);
     }
 
-    public function storeImages($request){
-      $file = $request->file($request->foto1);
-      dd($file);
-      $extension = $file->extension();
-      $newFilename = uniqid().".".$extension;
-      $folder = "imgsProductos";
-      $path = $request->storeAs($folder, $newFilename, 'public');
-
-      $productos = $folder."/".$newFilename;
-
-    }
+    // public function storeImages($request){
+    //   $file = $request->file($request->foto1);
+    //   $extension = $file->extension();
+    //   $newFilename = uniqid().".".$extension;
+    //   $folder = "imgsProductos";
+    //   $path = $request->storeAs($folder, $newFilename, 'public');
+    //   $productos = $folder."/".$newFilename;
+    //
+    // }
 
     public function showCategories(){
       if (Auth::check()) {

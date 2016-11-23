@@ -6,7 +6,7 @@
 @section('contenido')
   <div class="crearBox">
     <h2>Sube tu producto</h2>
-    <form class="" action="" method="post">
+    <form class="" action="" enctype="multipart/form-data" method="post">
       {{ csrf_field() }}
 
       <div class="">
