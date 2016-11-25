@@ -17,30 +17,30 @@ class ProductosController extends Controller
 
     public function NuevoProducto(Productos $request){
 
-      $newFilename = uniqid().".".$request->foto1->extension();
-      $path1 = $request->foto1->store('imgProductos', $newFilename, 'public');
+      // $newFilename = uniqid().".".$request->foto1->extension();
+      $path1 = $request->foto1->store('imgProductos', 'public');
 
       if ($request->hasFile('foto2')){
-        $newFilename2 = uniqid().".".$request->foto2->extension();
-        $path2 = $request->foto2->store('imgProductos', $newFilename2, 'public');
+        // $newFilename2 = uniqid().".".$request->foto2->extension();
+        $path2 = $request->foto2->store('imgProductos',  'public');
       }else{
         $path2 = "";
       }
       if ($request->hasFile('foto3')){
-        $newFilename3 = uniqid().".".$request->foto3->extension();
-        $path3 = $request->foto3->store('imgProductos', $newFilename3, 'public');
+        // $newFilename3 = uniqid().".".$request->foto3->extension();
+        $path3 = $request->foto3->store('imgProductos',  'public');
       }else{
         $path3 = "";
       }
       if ($request->hasFile('foto4')){
         $newFilename4 = uniqid().".".$request->foto4->extension();
-        $path4 = $request->foto4->store('imgProductos', $newFilename4, 'public');
+        $path4 = $request->foto4->store('imgProductos',  'public');
       }else{
         $path4 = "";
       }
       if ($request->hasFile('foto5')){
-        $newFilename5 = uniqid().".".$request->foto5->extension();
-        $path5 = $request->foto5->store('imgProductos', $newFilename5, 'public');
+        // $newFilename5 = uniqid().".".$request->foto5->extension();
+        $path5 = $request->foto5->store('imgProductos',  'public');
       }else{
         $path5 = "";
       }

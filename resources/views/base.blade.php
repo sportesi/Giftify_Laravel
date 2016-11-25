@@ -15,5 +15,6 @@
     @yield('contenido')
   </div>
   @include('footer')
+  <script src="js/scroll.js" charset="utf-8"></script>
   </body>
 </html>

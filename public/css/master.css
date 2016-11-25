@@ -473,6 +473,10 @@ fieldset{
     top: -2px;
     right: 10px;
   }
+  .searchbarBox input{
+    border-radius: 5px;
+    border: 1px solid #969696;
+  }
 @media (min-width: 400px) {
     .home .her, .home .him, .home .kids {
       /*HOME*/
@@ -653,7 +657,8 @@ fieldset{
       overflow: hidden;
       border: 2px solid #c4cac4;
       background-color: #fff;
-      margin: 20px auto;
+      margin: 10px auto;
+      transition: 300ms
   }
    ul {
     /*HOME*/
@@ -730,6 +735,7 @@ fieldset{
           padding: 1em;
           font-size: 1.5em;
           border-top: 1px solid #c1bcbc;
+          transition: 300ms
       }
 .main-nav ul {
           /*HOME*/
@@ -875,5 +881,18 @@ li.searchbarBox{
   position: absolute;
   top: -10px;
   right: 10px;
+}
+.sticky{
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.90);
+  width: 100%;
+  margin-top: 0;
+  z-index: 500;
+}
+.sticky .main-nav{
+  display: none;
+}
+.sticky img{
+  margin-top: 5px;
 }
 }
