@@ -25,9 +25,9 @@
                     <li><a href="/registro">Registrarse</a></li>
                     <li><a href="/productos">Store</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li>
+                    <li class="searchbarBox">
                         <input type="text" name="name" value="">
-                        <button type="button" name="button" class="sbutton">Search</button>
+                        <h4 class="ion-ios-search-strong"></h4>
                     </li>
                 </ul>
             </nav>

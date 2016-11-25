@@ -16,10 +16,26 @@ class ProductosController extends Controller
     public function NuevoProducto(Productos $request){
 
       $path1 = $request->foto1->store('imgProductos', 'public');
-      $path2 = $request->foto2->store('imgProductos', 'public');
-      $path3 = $request->foto3->store('imgProductos', 'public');
-      $path4 = $request->foto4->store('imgProductos', 'public');
-      $path5 = $request->foto5->store('imgProductos', 'public');
+      if ($request->hasFile('foto2')){
+        $path2 = $request->foto2->store('imgProductos', 'public');
+      }else{
+        $path2 = "";
+      }
+      if ($request->hasFile('foto3')){
+        $path3 = $request->foto3->store('imgProductos', 'public');
+      }else{
+        $path3 = "";
+      }
+      if ($request->hasFile('foto4')){
+        $path4 = $request->foto4->store('imgProductos', 'public');
+      }else{
+        $path4 = "";
+      }
+      if ($request->hasFile('foto5')){
+        $path5 = $request->foto5->store('imgProductos', 'public');
+      }else{
+        $path5 = "";
+      }
 
       $Product = Products::create([
         'title' => $request->title,
