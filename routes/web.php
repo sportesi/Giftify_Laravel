@@ -44,3 +44,8 @@ Route::get('editarProducto/{id}', 'ProductosController@editarMiProducto');
 Route::post('editarProducto/{id}', 'ProductosController@editarProducto');
 
 Route::get('producto/{id}', 'ProductosController@traerUnSoloProducto');
+
+Route::get('/add-to-cart/{id}', [
+  'uses' => 'ProductosController@getAddToCart',
+  'ass' => 'producto.AddToCart'
+]);
