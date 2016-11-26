@@ -15,24 +15,30 @@ class ProductosController extends Controller
 
     public function NuevoProducto(Productos $request){
 
-      $path1 = $request->foto1->store('imgProductos', 'public');
+      $newFilename = uniqid().".".$request->foto1->extension();
+      $path1 = $request->foto1->store('imgProductos', $newFilename, 'public');
+
       if ($request->hasFile('foto2')){
-        $path2 = $request->foto2->store('imgProductos', 'public');
+        $newFilename2 = uniqid().".".$request->foto2->extension();
+        $path2 = $request->foto2->store('imgProductos', $newFilename2, 'public');
       }else{
         $path2 = "";
       }
       if ($request->hasFile('foto3')){
-        $path3 = $request->foto3->store('imgProductos', 'public');
+        $newFilename3 = uniqid().".".$request->foto3->extension();
+        $path3 = $request->foto3->store('imgProductos', $newFilename3, 'public');
       }else{
         $path3 = "";
       }
       if ($request->hasFile('foto4')){
-        $path4 = $request->foto4->store('imgProductos', 'public');
+        $newFilename4 = uniqid().".".$request->foto4->extension();
+        $path4 = $request->foto4->store('imgProductos', $newFilename4, 'public');
       }else{
         $path4 = "";
       }
       if ($request->hasFile('foto5')){
-        $path5 = $request->foto5->store('imgProductos', 'public');
+        $newFilename5 = uniqid().".".$request->foto5->extension();
+        $path5 = $request->foto5->store('imgProductos', $newFilename5, 'public');
       }else{
         $path5 = "";
       }
