@@ -127,8 +127,48 @@ class ProductosController extends Controller
         $cart->add($producto, $producto->id);
 
         $request->session()->put('cart', $cart);
-        dd($request->session()->get('cart'));
-        return redirect('paginas.productos');
+        return redirect('/productos');
+    }
+
+    public function getReduceByOne($id){
+      $oldCart = Session::has('cart') ? Session::get('cart') : null;
+      $cart = new Cart($oldCart);
+      $cart->reduceByOne($id);
+
+      if(count($cart->items) > 0){
+
+        Session::put('cart', $cart);
+
+      }else{
+        Session::forget('cart');
+      }
+      
+      return redirect('/shopping-cart');
+    }
+
+    public function getRemoveItem($id){
+      $oldCart = Session::has('cart') ? Session::get('cart') : null;
+      $cart = new Cart($oldCart);
+      $cart->removeItem($id);
+
+      if(count($cart->items) > 0){
+
+        Session::put('cart', $cart);
+
+      }else{
+        Session::forget('cart');
+      }
+
+      return redirect('/shopping-cart');
+    }
+
+    public function getCart(){
+      if (!Session::has('cart')) {
+          return view('paginas.carrito');
+      }
+      $oldCart = Session::get('cart');
+      $cart = new Cart($oldCart);
+      return view("paginas.carrito", ['products' =>$cart->items, 'totalPrice' => $cart->totalPrice]);
     }
 
 }

@@ -45,7 +45,23 @@ Route::post('editarProducto/{id}', 'ProductosController@editarProducto');
 
 Route::get('producto/{id}', 'ProductosController@traerUnSoloProducto');
 
+Route::get('/shopping-cart', [
+  'uses' => 'ProductosController@getCart',
+]);
+
+
+
 Route::get('/add-to-cart/{id}', [
   'uses' => 'ProductosController@getAddToCart',
-  'ass' => 'producto.AddToCart'
+  'as' => 'producto.AddToCart'
+]);
+
+Route::get('/reduce/{id}', [
+  'uses' => "ProductosController@getReduceByOne",
+  'as' => 'producto.reduceByOne'
+]);
+
+Route::get('/remove/{id}', [
+  'uses' => 'ProductosController@getRemoveItem',
+  'as' => 'producto.remove'
 ]);

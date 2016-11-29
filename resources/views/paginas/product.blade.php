@@ -13,7 +13,7 @@
     {{  $product->description}}
   </p>
   <h2>{{ $product->prize }}</h2>
-  <button type="button" name="button">Carrito</button>
+  <a href="{{ route('producto.AddToCart', ['id' => $product->id]) }}">Carrito</a>>
 </div>
 
 @endsection

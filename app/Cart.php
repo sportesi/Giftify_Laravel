@@ -27,6 +27,23 @@ class Cart
       $storedItem['prize'] = $item->prize * $storedItem['Qty'];
       $this->items[$id] = $storedItem;
       $this->totalQty++;
-      $this->totalPrice += $items->prize
+      $this->totalPrice += $item->prize;
+    }
+
+    public function reduceByOne($id) {
+        $this->items[$id]['Qty']--;
+        $this->items[$id]['prize'] -= $this->items[$id]['item']['prize'];
+        $this->totalQty--;
+        $this->totalPrice -= $this->items[$id]['item']['prize'];
+
+        if($this->items[$id]['Qty'] <= 0){
+          unset($this->items[$id]);
+        }
+    }
+
+    public function removeItem($id){
+      $this->totalQty -= $this->items[$id]['Qty'];
+      $this->totalPrice -= $this->items[$id]['prize'];
+      unset($this->items[$id]);
     }
 }
