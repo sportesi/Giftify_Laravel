@@ -8,9 +8,9 @@ class Categories extends Model
 {
     protected $table = "categories";
 
-    protected $fillable = ['id', 'category'];
+    protected $fillable = ['id', 'category', 'created_at', 'updated_at'];
 
-    public $timestamps = false;
+    public $timestamps = true;
 
     public function Products() {
       return $this->hasMany('App\Products', 'id_category');

@@ -15,9 +15,6 @@
     </p>
         <label>${{ $product->prize }}</label>
     </div>
-    <div class="">
-      <a href="/add-to-cart">Agregar al carrito</a>
-    </div>
 </a>
   @endforeach
 @endsection

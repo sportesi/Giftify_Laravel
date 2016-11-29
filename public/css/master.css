@@ -477,6 +477,16 @@ fieldset{
     border-radius: 5px;
     border: 1px solid #969696;
   }
+  .productoIndividualBox img{
+    width: 90%;
+    margin: 5%;
+  }
+  .productoIndividualBox h1{
+    margin: 7px;
+  }
+  .productoIndividualBox p{
+    font-size: 1.5em;
+  }
 @media (min-width: 400px) {
     .home .her, .home .him, .home .kids {
       /*HOME*/
@@ -595,6 +605,37 @@ fieldset{
     }
     .crear .elementosFormulario{
       margin: 0;
+    }
+    .productoIndividualBox{
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .productoIndividualBox img{
+      width: 50%;
+      float: left;
+    }
+    .productoIndividualBox h1{
+      margin: 7px;
+    }
+    .productoIndividualBox p{
+      font-size: 1.5em;
+      float: left;
+    }
+    .productoIndividualBox h2{
+      float: left;
+    }
+    .productoIndividualBox a{
+      color: #fff;
+      background-color: #3f51b5;
+      padding: 7px;
+      width: 98%;
+      margin: 1%;
+      border-radius: 5px;
+      clear: both;
+      display: block;
+      text-align: center;
+      font-size: 1.5em;
+      
     }
 }
 @media (min-width: 850px){
@@ -895,4 +936,5 @@ li.searchbarBox{
 .sticky img{
   margin-top: 5px;
 }
+
 }
