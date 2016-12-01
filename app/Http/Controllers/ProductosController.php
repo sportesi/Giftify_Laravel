@@ -70,15 +70,11 @@ class ProductosController extends Controller
     //
     // }
 
-    public function showCategories(){
-      if (Auth::check()) {
-        $categories = Categories::all();
-        return view('paginas.create', compact('categories'));
-      }
-    }
+
     public function showProductos(){
       $products = Products::all();
-      return view('paginas.productos', compact('products'));
+      $categories = Categories::all();
+      return view('paginas.productos', compact('products','categories'));
     }
     public function showMyProducts(){
       $products = Products::all();
@@ -142,7 +138,7 @@ class ProductosController extends Controller
       }else{
         Session::forget('cart');
       }
-      
+
       return redirect('/shopping-cart');
     }
 

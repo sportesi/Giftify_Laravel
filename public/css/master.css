@@ -487,6 +487,57 @@ fieldset{
   .productoIndividualBox p{
     font-size: 1.5em;
   }
+  /* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    border: 1px solid #959595;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display:block;
+}
+.carrito{
+  background-color: #fff;
+  margin: 10px auto;
+  
+}
 @media (min-width: 400px) {
     .home .her, .home .him, .home .kids {
       /*HOME*/
@@ -635,7 +686,7 @@ fieldset{
       display: block;
       text-align: center;
       font-size: 1.5em;
-      
+
     }
 }
 @media (min-width: 850px){
@@ -699,7 +750,7 @@ fieldset{
       border: 2px solid #c4cac4;
       background-color: #fff;
       margin: 10px auto;
-      transition: 300ms
+      transition: 500ms;
   }
    ul {
     /*HOME*/
@@ -776,7 +827,7 @@ fieldset{
           padding: 1em;
           font-size: 1.5em;
           border-top: 1px solid #c1bcbc;
-          transition: 300ms
+          transition: 500ms
       }
 .main-nav ul {
           /*HOME*/
@@ -912,29 +963,33 @@ fieldset{
     width: 30%;
     margin: 1.66666667%;
   }
-.crear div.crearBox{
-  width: 100%;
-}
-li.searchbarBox{
-  margin: 3px;
-}
-.searchbarBox h4{
-  position: absolute;
-  top: -10px;
-  right: 10px;
-}
-.sticky{
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.90);
-  width: 100%;
-  margin-top: 0;
-  z-index: 500;
-}
-.sticky .main-nav{
-  display: none;
-}
-.sticky img{
-  margin-top: 5px;
-}
+  .crear div.crearBox{
+    width: 100%;
+  }
+  li.searchbarBox{
+    margin: 3px;
+  }
+  .searchbarBox h4{
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+  .sticky{
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.90);
+    width: 100%;
+    margin-top: 0;
+    z-index: 500;
+  }
+  .sticky .main-nav{
+    display: none;
+  }
+  .sticky img{
+    margin-top: 5px;
+  }
+  .stickyMain{
+    padding-top: 190px;
+  }
+
 
 }

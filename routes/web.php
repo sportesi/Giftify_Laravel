@@ -20,14 +20,14 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/preguntas', 'RoutesController@preguntas');
 
-Route::get('login', 'AuthenticationController@showLoginForm')->name('login');
-Route::post('login', 'AuthenticationController@login');
+Route::get('/login', 'AuthenticationController@showLoginForm')->name('login');
+Route::post('/login', 'AuthenticationController@login');
 
 Route::get('/registro', 'RoutesController@registro');
-Route::get('register', 'AuthenticationController@showRegisterForm');
-Route::post('register', 'AuthenticationController@register');
+Route::get('/register', 'AuthenticationController@showRegisterForm');
+Route::post('/register', 'AuthenticationController@register');
 
-Route::get('logout', 'AuthenticationController@logout')->name('logout');
+Route::get('/logout', 'AuthenticationController@logout')->name('logout');
 
 Route::get('/NuevoProducto', 'RoutesController@crear');
 Route::post('/NuevoProducto', 'ProductosController@NuevoProducto');

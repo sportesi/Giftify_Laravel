@@ -11,9 +11,11 @@
   </head>
   <body class="@yield('bodyname')">
     @include('header')
+    <main id="main">      
     <div class="container ">
     @yield('contenido')
-  </div>
+    </div>
+  </main>
   @include('footer')
   <script src="js/scroll.js" charset="utf-8"></script>
   </body>

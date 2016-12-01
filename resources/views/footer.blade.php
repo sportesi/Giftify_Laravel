@@ -3,11 +3,10 @@
         <article class="footer-nav">
 
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="#">Productos</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/productos">Productos</a></li>
                 <li><a href="/preguntas">Preguntas frecuentes</a></li>
-                <li><a href="registro2.php">Registrarse</a></li>
-                <li><a href="Login.php">Log in</a></li>
+                <li><a href="/registro">Registrarse</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </article>
