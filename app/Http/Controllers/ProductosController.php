@@ -175,5 +175,13 @@ class ProductosController extends Controller
       $productsCategory = Products::where('id_category', '=', $idCategory)->get();
       return view("paginas.indivCategory", compact('productsCategory'));
     }
+    public function SearchByKeyword(Request $request){
+      $keyword = $request->search;
+        if ($keyword!='') {
+            $query = Products::where("title", "like","%$keyword%")->get();
+            // dd($query);
+          return view('paginas.searchProducts', compact('query'));
+        }
+    }
 
 }

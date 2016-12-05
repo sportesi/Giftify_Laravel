@@ -26,8 +26,12 @@
                     <li><a href="/productos">Store</a></li>
                     <li><a href="#">Contact</a></li>
                     <li class="searchbarBox">
-                        <input type="text" name="name" value="">
+                      <form class="" method="post" action="/search">
+                        {{ csrf_field() }}
+
+                        <input type="text" name="search" value="">
                         <h4 class="ion-ios-search-strong"></h4>
+                      </form>
                     </li>
                 </ul>
             </nav>

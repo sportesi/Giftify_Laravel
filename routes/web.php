@@ -46,6 +46,8 @@ Route::post('editarProducto/{id}', 'ProductosController@editarProducto');
 
 Route::get('/categorias', 'ProductosController@allCategories');
 
+Route::post('/search', 'ProductosController@SearchByKeyword');
+
 Route::get('/producto/{id}', 'ProductosController@traerUnSoloProducto');
 Route::get('/producto/categoria/{idCategory}', 'ProductosController@showIndivCategory');
 
