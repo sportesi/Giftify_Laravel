@@ -43,24 +43,23 @@ Route::get('borrarProducto/{id}', 'ProductosController@borrar');
 Route::get('editarProducto/{id}', 'ProductosController@editarMiProducto');
 Route::post('editarProducto/{id}', 'ProductosController@editarProducto');
 
-Route::get('producto/{id}', 'ProductosController@traerUnSoloProducto');
+
+Route::get('/categorias', 'ProductosController@allCategories');
+
+Route::get('/producto/{id}', 'ProductosController@traerUnSoloProducto');
+Route::get('/producto/categoria/{idCategory}', 'ProductosController@showIndivCategory');
 
 Route::get('/shopping-cart', [
   'uses' => 'ProductosController@getCart',
 ]);
-
-
-
 Route::get('/add-to-cart/{id}', [
   'uses' => 'ProductosController@getAddToCart',
   'as' => 'producto.AddToCart'
 ]);
-
 Route::get('/reduce/{id}', [
   'uses' => "ProductosController@getReduceByOne",
   'as' => 'producto.reduceByOne'
 ]);
-
 Route::get('/remove/{id}', [
   'uses' => 'ProductosController@getRemoveItem',
   'as' => 'producto.remove'

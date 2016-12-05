@@ -55,6 +55,7 @@
           <button type="button" name="button">Shop now!</button>
         </div>
       </article>
+      <a href="/categorias" class="mass">Mas...</a>
   </section>
   <!-- banner2 -->
   <section class="banner2">

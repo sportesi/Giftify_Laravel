@@ -5,8 +5,7 @@
 
 @section('contenido')
   <form id='register' action='{{ url('/register') }}' method='post' name="form" >
-    {{ csrf_fie
-      ld() }}
+    {{ csrf_field() }}
 
       <fieldset>
           <legend>
@@ -19,7 +18,7 @@
                   <br>
                   <input  id="name" type="text" placeholder="Juan" class="typeText" name="name" value="{{ old('name') }}">
                   <br>
-                    @if ($errors->re gistro->has('name'))
+                    @if ($errors->registro->has('name'))
                             <strong style="color: #f00">{{ $errors->registro->first('name') }}</strong>
                     @endif
               </div>

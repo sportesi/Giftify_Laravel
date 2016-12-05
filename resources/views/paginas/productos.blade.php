@@ -4,11 +4,8 @@
 
 @section('bodyname')productos @endsection
 @section('contenido')
-  @foreach ($categories as $category)
-    <a href="#">{{ $category->category }}</a>
-  @endforeach
   @foreach ($products as $product)
-    <a href="producto/{{ $product->id }}">
+    <a href="/producto/{{ $product->id }}">
     <div class="productBox">
 
       <h2>{{ $product->title }}</h2>

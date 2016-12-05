@@ -3,6 +3,9 @@
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
+.container{
+  min-height: 143px;
+}
 img.logoNav{
   max-width: 10px:
 }
@@ -235,6 +238,8 @@ nav .main-nav {
     background-color: #fff;
     width: 100%;
     overflow: hidden;
+    position: flex;
+    align-items: flex-end;
 }
 .main-footer a:hover {
       color: #2196f3;
@@ -536,7 +541,90 @@ fieldset{
 .carrito{
   background-color: #fff;
   margin: 10px auto;
-  
+  min-height: 143px;
+  position: relative;
+  }
+.mass{
+  background-color: #009688;
+  padding: 5px;
+  border-radius: 5px;
+  float: right;
+  margin: 1px;
+  color: #fff;
+  font-size: 1.5em;
+}
+.categories{
+  font-size: 10px;
+  background-color: #e2e2e2;
+  margin: auto;
+}
+.categories .container{
+  max-width: 920px;
+  margin: auto;
+  overflow: hidden;
+  /*margin-bottom: 10px;*/
+  width: 100%;
+}
+.categories .contenido{
+  width: 100%;
+  height: 100%;
+}
+.categories .contenido ul{
+  background-color: #fff;
+  text-align: left;
+  overflow: hidden;
+  width: 100%;
+}
+.categories .contenido ul li{
+  border: 2px solid #e2e2e2;
+  padding: 5px;
+  width: 148px;
+  height: 45px;
+  display: inline-block;;
+  margin: 2px;
+  font-size: 1.5em;
+}
+.categories .contenido  a{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+div.carrito{
+  height: 100%;
+  font-size: 1.5em;
+}
+.totalPrice{
+  float: left;
+  margin: 2px;
+}
+.carrito button{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: none;
+  background-color: #3f51b5;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  width: 100%;
+
+}
+.totalPrice2{
+  float: right;
+  margin: 2px;
+}
+hr{
+  clear: both;
+}
+.carrito .bottonsCarrito li a{
+background-color:#4caf50;
+color: #fff;
+padding: 5px;
+margin: 2px;
+border-radius: 5px;
+}
+.carrito .bottonsCarrito li{
+  margin: 13px;
 }
 @media (min-width: 400px) {
     .home .her, .home .him, .home .kids {
@@ -990,6 +1078,7 @@ fieldset{
   .stickyMain{
     padding-top: 190px;
   }
+
 
 
 }

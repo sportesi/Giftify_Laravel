@@ -167,4 +167,13 @@ class ProductosController extends Controller
       return view("paginas.carrito", ['products' =>$cart->items, 'totalPrice' => $cart->totalPrice]);
     }
 
+    public function allCategories(){
+      $categories = Categories::all();
+      return view('paginas.categorias', compact('categories'));
+    }
+    public function showIndivCategory($idCategory){
+      $productsCategory = Products::where('id_category', '=', $idCategory)->get();
+      return view("paginas.indivCategory", compact('productsCategory'));
+    }
+
 }
