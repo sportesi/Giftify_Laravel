@@ -223,7 +223,7 @@ nav .main-nav {
       /*HOME*/
         width: 100%;
     }
-.categorias button {
+.categorias a{
       /*HOME*/
         background-color: #4caf50;
         color: #fff;

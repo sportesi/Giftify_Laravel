@@ -25,22 +25,22 @@
         <img src="imgs/her.jpg" alt="" class="imgcategorias" />
           <div class="textocate">
 
-          <h2>Her</h2>
+          <h2>Joyas y Relojes</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
-          <button type="button" name="button">Shop now!</button>
+          <a href="/producto/categoria/22">¡Comprar!</a>
         </div>
       </article>
       <article class="him">
         <img src="imgs/him.jpg" alt=""  class="imgcategorias"/>
           <div class="textocate">
 
-          <h2>Him</h2>
+          <h2>Ropa y Accesorios</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
-          <button type="button" name="button">Shop now!</button>
+          <a href="/producto/categoria/26">¡Comprar!</a>
         </div>
       </article>
     </div>
@@ -52,7 +52,7 @@
           <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
-          <button type="button" name="button">Shop now!</button>
+          <a href="/producto/categoria/7">¡Comprar!</a>
         </div>
       </article>
       <a href="/categorias" class="mass">Mas...</a>
