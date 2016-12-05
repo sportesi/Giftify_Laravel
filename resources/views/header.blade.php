@@ -27,8 +27,9 @@
                     <li><a href="#">Contact</a></li>
                     <li class="searchbarBox">
                       <form class="" method="post" action="/search">
-                        {{ csrf_field() }}
+                        <input type="hidden" name="formulario" value="search">
 
+                        {{ csrf_field() }}
                         <input type="text" name="search" value="">
                         <h4 class="ion-ios-search-strong"></h4>
                       </form>
