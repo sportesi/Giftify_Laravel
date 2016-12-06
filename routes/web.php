@@ -15,6 +15,10 @@ Route::get('/', 'RoutesController@index');
 
 Auth::routes();
 
+Route::get("/profile", "AvatarController@showProfile");
+
+Route::post("/change-profile", "AvatarController@updateAvatar");
+
 Route::get('/home', 'HomeController@index');
 
 

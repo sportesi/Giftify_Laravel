@@ -9,6 +9,23 @@
 img.logoNav{
   max-width: 10px:
 }
+.avatar{
+  width: 100px;
+  border-radius: 50%
+}
+
+.button{
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5%;
+}
+.contenido-perfil{
+  text-align: center;
+  margin: 20px auto;
+}
+
 .ion-navicon-round{
   font-size: 2em;
   color: #fff;

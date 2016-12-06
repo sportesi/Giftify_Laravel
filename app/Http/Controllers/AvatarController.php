@@ -3,43 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
-use Image;
-use File;
+use Auth, Storage;
 use App\User;
 use App\Http\Requests\AvatarStore;
+use \Input as Input;
 
 class AvatarController extends Controller
 {
   public function showProfile(){
-    return view('pagina.perfil', array('user' => Auth::user()));
+    return view('paginas.perfil', array('user' => Auth::user()));
   }
   public function updateAvatar(AvatarStore $request){
 
-    if($request->hasFile('avatar')){
-      $avatar = $request->file('avatar');
-      $fileName = time().'.'.$avatar->getClientOriginalExtension();
 
-      $this->deleteOldImahe(Auth::user());
-    }
-    return view('pagina.profile', array('user'=> Auth::user()));
+    // $this->removeAvatarIfExists(Auth::user());
+      // $newFilename = uniqid().".".$request->avatar->extension();
+
+      $folder = "avatars";
+
+      $path = $request->file("avatar")->store($folder , 'public');
+      $img = User::update(['avatar'=> $path]);
+
+      $img->save();
+    return redirect("/profile");
   }
 
-  protected function deleteOldImage($user){
+    protected function removeAvatarIfExists($user) {
+    	if($user->avatar) {
 
-    if($user->avatar !== 'default.jpg'){
-
-      $file = 'storege/avatars/'.$user->avatar;
-
-      if(File::exists($file)){
-        unlink($file);
-      }
+    		Storage::disk('public')->delete($user->avatar);
+    	}
     }
-  }
-
-
-
-
-
-
 }
