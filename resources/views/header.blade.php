@@ -2,7 +2,7 @@
 <header>
     <section class="header">
         <article class="logo">
-            <a href="index.php"><img src="/imgs/logo2.png" alt="logo" /></a>
+            <a href="/index.php"><img src="/imgs/logo2.png" alt="logo" /></a>
         </article>
         <div class="menus">
             <article>
@@ -27,9 +27,8 @@
                     <li><a href="#">Contact</a></li>
                     <li class="searchbarBox">
                       <form class="" method="post" action="/search">
-                        <input type="hidden" name="formulario" value="search">
-
                         {{ csrf_field() }}
+                        <input type="hidden" name="formulario" value="search">
                         <input type="text" name="search" value="">
                         <h4 class="ion-ios-search-strong"></h4>
                       </form>

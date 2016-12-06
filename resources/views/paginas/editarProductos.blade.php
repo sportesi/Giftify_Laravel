@@ -6,7 +6,7 @@
 @section('contenido')
   <div class="crearBox">
     <h2>Edita tu producto</h2>
-    <form class="" action="" method="post">
+    <form class="" action="" method="post" enctype="multipart/form-data">
       {{ csrf_field() }}
 
       <div class="">
@@ -38,7 +38,7 @@
         @endif
         <div class="">
           <label class="elementosFormulario">Descripción:</label>
-          <textarea name="description" value="{{ $product->description }}" class="elementosFormulario" ></textarea>
+          <textarea name="description" value="" class="elementosFormulario" >{{ $product->description }}</textarea>
 
         </div>
         @if ($errors->has('description'))

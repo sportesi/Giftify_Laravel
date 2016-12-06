@@ -15,7 +15,6 @@ Route::get('/', 'RoutesController@index');
 
 Auth::routes();
 
-Route::get("/profile", "AvatarController@showProfile");
 
 Route::post("/change-profile", "AvatarController@updateAvatar");
 
@@ -70,3 +69,4 @@ Route::get('/remove/{id}', [
   'uses' => 'ProductosController@getRemoveItem',
   'as' => 'producto.remove'
 ]);
+Route::get("/perfil", "AvatarController@showProfile");

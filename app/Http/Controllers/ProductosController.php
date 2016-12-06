@@ -90,15 +90,40 @@ class ProductosController extends Controller
       return view('paginas.editarProductos', compact('product'));
     }
     public function editarProducto(Productos $request, $id ) {
+      $path1 = $request->file('foto1')->store('imgProductos', 'public');
 
+      if ($request->hasFile('foto2')){
+        // $newFilename2 = uniqid().".".$request->foto2->extension();
+        $path2 = $request->foto2->store('imgProductos',  'public');
+      }else{
+        $path2 = "";
+      }
+      if ($request->hasFile('foto3')){
+        // $newFilename3 = uniqid().".".$request->foto3->extension();
+        $path3 = $request->foto3->store('imgProductos',  'public');
+      }else{
+        $path3 = "";
+      }
+      if ($request->hasFile('foto4')){
+        $newFilename4 = uniqid().".".$request->foto4->extension();
+        $path4 = $request->foto4->store('imgProductos',  'public');
+      }else{
+        $path4 = "";
+      }
+      if ($request->hasFile('foto5')){
+        // $newFilename5 = uniqid().".".$request->foto5->extension();
+        $path5 = $request->foto5->store('imgProductos',  'public');
+      }else{
+        $path5 = "";
+      }
 		$product = Products::find($id);
 		$product->fill([
       'title' => $request->title,
-      'photo_1' => $request->foto1,
-      'photo_2' => $request->foto2,
-      'photo_3' => $request->foto3,
-      'photo_4' => $request->foto4,
-      'photo_5' => $request->foto5,
+      'photo_1' => $path1,
+      'photo_2' => $path2,
+      'photo_3' => $path3,
+      'photo_4' => $path4,
+      'photo_5' => $path5,
       'description' => $request->description,
       'prize' => $request->prize,
       'id_user' => Auth::user()->id,
@@ -109,7 +134,7 @@ class ProductosController extends Controller
     	 * Actualizo los datos del usuario en la BD
     	 */
     	$product->save();
-
+        return redirect('/MisProductos');
     }
     public function traerUnSoloProducto($id){
       $product = Products::find($id);
