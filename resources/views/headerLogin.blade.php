@@ -1,6 +1,6 @@
 <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
     {{ csrf_field() }}
-
+<input type="hidden" name="" value="login">
     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} loginContrasena">
         <label for="email" class="col-md-4 control-label">E-Mail</label>
 
