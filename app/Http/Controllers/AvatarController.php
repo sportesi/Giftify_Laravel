@@ -22,10 +22,9 @@ class AvatarController extends Controller
       $folder = "avatars";
 
       $path = $request->file("avatar")->store($folder , 'public');
-      $img = User::update(['avatar'=> $path]);
+      $img = Auth::User()->update(['avatar'=> $path]);
 
-      $img->save();
-    return redirect("/profile");
+    return redirect("/perfil");
   }
 
     protected function removeAvatarIfExists($user) {

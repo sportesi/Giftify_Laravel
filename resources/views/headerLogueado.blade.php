@@ -6,7 +6,7 @@
 
 		<img src="/imgs/avatar.jpg" alt="" />
 	@else
-		<img src="{{ asset('./storage/' . Auth::user()->avatar) }}" alt="">
+		<img src="{{ asset('./storage/' . Auth::user()->avatar) }}" alt="" class="avatar">
 	@endif
 	<a href="/shopping-cart"class="ion-ios-cart"></a>
 	<span>{{Session::has('cart') ? Session::get('cart')->totalQty : ""}}</span>

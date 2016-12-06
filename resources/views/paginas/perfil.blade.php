@@ -6,7 +6,7 @@
 @section('bodyname')productos @endsection
 @section('contenido')
   <div class="contenido-perfil">
-    <img class="avatar" src="storage/avatars/{{$user->avatar}}" alt="">
+    <img class="avatar" src="{{ asset('./storage/' . Auth::user()->avatar) }}" alt="">
     <form enctype="multipart/form-data"  class="avatar" action="/change-profile" method="post">
       {{ csrf_field() }}
       <input type="file" name="avatar" accept="image/*">
