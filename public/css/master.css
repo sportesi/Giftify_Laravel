@@ -618,9 +618,9 @@ fieldset{
   font-size: 1.5em;
 }
 .categories .contenido  a{
-  display: flex;
+  /*display: flex;
   align-content: center;
-  justify-content: center;
+  justify-content: center;*/
 }
 div.carrito{
   height: 100%;

@@ -54,6 +54,9 @@ Route::post('/search', 'ProductosController@SearchByKeyword');
 Route::get('/producto/{id}', 'ProductosController@traerUnSoloProducto');
 Route::get('/producto/categoria/{idCategory}', 'ProductosController@showIndivCategory');
 
+Route::get('/wishlist', 'ProductosController@miWishlist');
+Route::get('/wishlist/{ProductId}', 'ProductosController@wishlist');
+
 Route::get('/shopping-cart', [
   'uses' => 'ProductosController@getCart',
 ]);

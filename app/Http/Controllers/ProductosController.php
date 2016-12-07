@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\productos;
 use \App\Categories;
 use \App\Products;
+use \App\Wishlist;
 use Storage;
 use Auth;
 use Session;
@@ -208,6 +209,22 @@ class ProductosController extends Controller
             // dd($query);
           return view('paginas.searchProducts', compact('query'));
         }
+    }
+    public function wishlist($productId){
+      $wishlist = Wishlist::create([
+       'user_id'  => Auth::User()->id,
+       'product_id'  => $productId, //al final se ponen los nombres del tag "name" del form.
+      ]);
+
+     return redirect('/wishlist' . $postId); //Lo ponemos así para que mantenga el post en el que estamos.
+    }
+    public function miWishlist(){
+      $wishlistWhereId = Wishlist::where('user_id', '=', Auth::user()->id)->get();
+      $arrayIdProducts = [];
+      foreach ($wishlistWhereId as $misProductosId) {
+          array_push($arrayIdProducts, Products::find($misProductosId->product_id));
+      }
+        return view('paginas.wishlist', compact('arrayIdProducts'));
     }
 
 }
