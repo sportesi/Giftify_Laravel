@@ -84,8 +84,9 @@ class ProductosController extends Controller
     }
     public function borrar($id){
       $products = Products::find($id);
+      // dd($products);
       $products->delete();
-      return view('paginas.misProductos', compact('products'));
+      return redirect('/MisProductos');
     }
     public function editarMiProducto($id){
       $product = Products::find($id);
@@ -216,7 +217,7 @@ class ProductosController extends Controller
        'product_id'  => $productId, //al final se ponen los nombres del tag "name" del form.
       ]);
 
-     return redirect('/wishlist' . $postId); //Lo ponemos así para que mantenga el post en el que estamos.
+     return redirect('/wishlist'); //Lo ponemos así para que mantenga el post en el que estamos.
     }
     public function miWishlist(){
       $wishlistWhereId = Wishlist::where('user_id', '=', Auth::user()->id)->get();
@@ -225,6 +226,10 @@ class ProductosController extends Controller
           array_push($arrayIdProducts, Products::find($misProductosId->product_id));
       }
         return view('paginas.wishlist', compact('arrayIdProducts'));
+    }
+    public function deleteFromWishlist($id){
+      $wishlistProducts = Wishlist::where('product_id', '=', $id)->get()->delete();
+      return redirect('/wishlist');
     }
 
 }

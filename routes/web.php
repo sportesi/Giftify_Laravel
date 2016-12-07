@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/home', 'RoutesController@index');
 Route::get('/', 'RoutesController@index');
 
 Auth::routes();
@@ -56,6 +57,7 @@ Route::get('/producto/categoria/{idCategory}', 'ProductosController@showIndivCat
 
 Route::get('/wishlist', 'ProductosController@miWishlist');
 Route::get('/wishlist/{ProductId}', 'ProductosController@wishlist');
+Route::get('/wishlist/delete/{id}', 'ProductosController@deleteFromWishlist');
 
 Route::get('/shopping-cart', [
   'uses' => 'ProductosController@getCart',

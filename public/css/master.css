@@ -110,7 +110,7 @@ header {
 }
 .avatar{
   width: 100px;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 .logo img {
     /*HOME*/
@@ -205,10 +205,10 @@ nav .main-nav {
   display: block;
   margin: auto;
 }
-.ion-ios-cart{
+.ion-ios-cart, .ion-star{
   font-size: 3em;
 }
-.ion-ios-cart:hover{
+.ion-ios-cart:hover, .ion-star:hover{
   color: #3f51b5;
 }
 .banner img {
@@ -683,6 +683,32 @@ header:after {
     display: block;
     clear: both;
 }
+.productosEnPag{
+  height: 300px;
+  /*position: relative;*/
+}
+.productosEnPag img{
+  height: 200px;
+}
+.productosEnPag1{
+  height: 250px;
+  /*position: relative;*/
+}
+.productosEnPag1 img{
+  min-height: 200px;
+  max-height: 200px;
+}
+.olvideMiContrasena{
+  font-size: 10px;
+  margin: auto;
+  background-color: #e2e2e2;
+
+}
+.olvideMiContrasena main{
+  max-width: 850px;
+  margin: auto;
+}
+
 @media (min-width: 400px) {
     .home .her, .home .him, .home .kids {
       /*HOME*/
@@ -693,6 +719,15 @@ header:after {
 .productBox{
   width: 70%;
   margin: auto;
+}
+.carrito .buttonsCheckout .checkout{
+  margin-top: 15px;
+}
+.buttonsCheckout{
+  overflow: hidden;
+}
+.buttonsCheckout strong{
+  margin: 3px auto 40px auto;
 }
 @media (min-width: 500px) {
 
@@ -1001,7 +1036,7 @@ header:after {
 .btn-link, .col-md-offset-4{
   clear: both;
 }
-.ion-ios-cart{
+.ion-ios-cart, .ion-star{
   float: left;
   margin: 7px 5px 5px 10px;
 }

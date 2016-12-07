@@ -8,7 +8,7 @@
   @foreach ($products as $product)
     @if (Auth::user()->id == $product->id_user)
 
-            <div class="productBox">
+            <div class="productBox productosEnPag">
 
               <h2>{{ $product->title }}</h2>
               <div class="img-pdto">

@@ -23,9 +23,11 @@
       </ul>
       <hr>
     @endforeach
-      <strong class="totalPrice">Total price:</strong><strong class="totalPrice2">${{$totalPrice}} </strong>
-      <button type="submit" name="button">Checkout</button>
-      <hr>
+    <div class="buttonsCheckout">
+
+      <strong class="totalPrice">Precio total:</strong><strong class="totalPrice2">${{$totalPrice}} </strong>
+      <button type="submit" name="button" class="checkout">Checkout</button>
+    </div>
   @else
     <div class="">
       <h2>No tenes ningun producto en el carrito</h2>

@@ -1,7 +1,10 @@
-@extends('layouts.app')
+@extends('base')
+@section('bodyname')
+  olvideMiContrasena
+@endsection
 
 <!-- Main Content -->
-@section('content')
+@section('contenido')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -34,7 +37,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Send Password Reset Link
+                                    Enviar Link para cambiar la Contraseña
                                 </button>
                             </div>
                         </div>

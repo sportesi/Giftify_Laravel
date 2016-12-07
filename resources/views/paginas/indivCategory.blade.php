@@ -10,7 +10,7 @@
     <ul>
       @foreach ($productsCategory as $product)
         <a href="/producto/{{ $product->id }}">
-          <div class="productBox">
+          <div class="productBox productosEnPag">
 
             <h2>{{ $product->title }}</h2>
             <img src="{{ asset('./storage/' . $product->photo_1) }}" alt="" />

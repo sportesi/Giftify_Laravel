@@ -5,10 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Categories;
+use \App\Products;
 
 class RoutesController extends Controller{
+
     public function index(){
-          return view('paginas.index');
+      $products = Products::all();
+          return view('paginas.index' ,compact('products'));
     }
     public function registro(){
           return view('paginas.registro');

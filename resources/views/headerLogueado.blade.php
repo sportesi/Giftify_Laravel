@@ -9,6 +9,7 @@
 		<img src="{{ asset('./storage/' . Auth::user()->avatar) }}" alt="" class="avatar">
 	@endif
 	<a href="/shopping-cart"class="ion-ios-cart"></a>
+	<a href="/wishlist" class="ion-star"></a>
 	<span>{{Session::has('cart') ? Session::get('cart')->totalQty : ""}}</span>
 	<strong class="nombreLogueado"> {{ Auth::user()->name }}</strong>
 	<div class="dropdown">
