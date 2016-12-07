@@ -11,7 +11,9 @@
             <div class="productBox">
 
               <h2>{{ $product->title }}</h2>
+              <div class="img-pdto">
               <img src="{{ asset('./storage/' . $product->photo_1) }}" alt="" />
+              </div>
               <p>
                 {{ $product->description }}
               </p>

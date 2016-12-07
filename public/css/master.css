@@ -69,6 +69,12 @@ img.logoNav{
     color: #2196f3;
     border-bottom: 2px solid #2196f3;
 }
+
+.social-logos {
+  /*HOME*/
+  text-align: center;
+}
+
 .social-logos img {
   /*HOME*/
   width: 20%;
@@ -369,6 +375,13 @@ fieldset{
     width: 100%;
     height: auto;
   }
+
+  .ion-social-facebook, .ion-social-twitter{
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 5em;
+
+  }
   .owl-item {
     float: left;
   }
@@ -385,6 +398,7 @@ fieldset{
   }
   .ion-social-facebook, .ion-social-twitter{
     color: #607d8b;
+    text-align: center;
   }
   .main-footer .ion-social-facebook:hover, .main-footer .ion-social-twitter:hover{
     color: #00bcd4;
@@ -406,6 +420,7 @@ fieldset{
     text-align: center;
     width: 95%;
     margin: 5px auto 10px auto;
+    border-radius: 10px
   }
 
   .crear .elementosFormulario{
@@ -627,6 +642,25 @@ div.carrito{
   width: 100%;
 
 }
+
+.img-pdto{
+  max-width: 60%;
+  margin: auto;
+  position: relative;
+  padding-top: 60%;
+  overflow: hidden;
+
+}
+
+.img-pdto img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .totalPrice2{
   float: right;
   margin: 2px;
@@ -719,6 +753,7 @@ header:after {
       font-size: 1.2em;
       color: #000;
   }
+
   .home p {
     /*HOME*/
       display: inline-block;

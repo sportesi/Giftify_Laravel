@@ -11,8 +11,8 @@
             </ul>
         </article>
         <article class="social-logos" id="social-logos">
-          <a href="https://www.facebook.com/" new class="ion-social-facebook" style="font-size: 9em;"> </a>
-          <a href="https://twitter.com/" new class="ion-social-twitter" style="font-size: 9em;"> </a>
+          <a href="https://www.facebook.com/" new class="ion-social-facebook"> </a>
+          <a href="https://twitter.com/" new class="ion-social-twitter"></a>
         </article>
     </section>
 </footer>
