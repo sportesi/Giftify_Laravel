@@ -58,6 +58,7 @@ class ProductosController extends Controller
         'id_user' => Auth::user()->id,
       ]);
       // $this->storeImages($request);
+      return redirect("/productos");
     }
 
     // public function storeImages($request){

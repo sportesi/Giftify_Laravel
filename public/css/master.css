@@ -473,6 +473,7 @@ fieldset{
   }
   .productoIndividualBox{
     background-color: #fff;
+    text-align: center;
   }
   .buttonCrear{
     width: 97%;
@@ -773,24 +774,22 @@ header:after {
     }
     .productoIndividualBox img{
       width: 50%;
-      float: left;
     }
     .productoIndividualBox h1{
       margin: 7px;
     }
     .productoIndividualBox p{
       font-size: 1.5em;
-      float: left;
     }
     .productoIndividualBox h2{
-      float: left;
     }
     .productoIndividualBox a{
+
       color: #fff;
       background-color: #3f51b5;
       padding: 7px;
-      width: 98%;
-      margin: 1%;
+      width: 20%;
+      margin: auto;
       border-radius: 5px;
       clear: both;
       display: block;
