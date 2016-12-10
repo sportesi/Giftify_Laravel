@@ -16,9 +16,9 @@
   <button onclick="myFunction()" class=" ion-arrow-down-b dropbtn"></button>
   <div id="myDropdown" class="dropdown-content">
 		<a href="/perfil">Mi Perfil</a>
-		<a href="/logout">Log Out</a><br>
-		<a href="/NuevoProducto">Crear un Producto</a><br>
+		<a href="/NuevoProducto">Crear un Producto</a>
 		<a href="/MisProductos">Mis Productos</a>
+		<a href="/logout">Log Out</a><br>
   </div>
 </div>
 

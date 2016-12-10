@@ -4,6 +4,7 @@
 
 @section('bodyname')productos @endsection
 @section('contenido')
+  <h1>Search...</h1>
   @foreach ($query as $product)
     <a href="/producto/{{ $product->id }}">
     <div class="productBox productosEnPag">

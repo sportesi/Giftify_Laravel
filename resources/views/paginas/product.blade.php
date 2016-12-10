@@ -13,8 +13,11 @@
     {{  $product->description}}
   </p>
   <h2>Price: ${{ $product->prize }}</h2>
-  <a href="{{ route('producto.AddToCart', ['id' => $product->id]) }}">Carrito</a>>
-  <a href="/wishlist/{{$product->id}}">Wishlist</a>
+  @if (Auth::check())
+    <a href="{{ route('producto.AddToCart', ['id' => $product->id]) }}">Carrito</a>>
+    <a href="/wishlist/{{$product->id}}">Wishlist</a>
+
+  @endif
 </div>
 
 @endsection

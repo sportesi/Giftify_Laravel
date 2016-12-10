@@ -12,8 +12,8 @@
               <strong>{{ $product->title }}</strong>
               <span>${{ $product->prize }}</span>
             </li>
-            {{-- <a href="{{ route('producto.AddToCart', ['id' => $product->id]) }}">Pasar al Carrito</a>
-            <a href="/wishlist/delete/{{ $product->id }}">Sacar de mi Wishlist</a> --}}
+            <a href="{{ route('producto.AddToCart', ['id' => $product->id]) }}">Pasar al Carrito</a>
+            {{-- <a href="/wishlist/delete/{{ $product->id }}">Sacar de mi Wishlist</a> --}}
         </ul>
         <hr>
     @endforeach

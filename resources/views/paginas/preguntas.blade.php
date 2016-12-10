@@ -1,4 +1,7 @@
 @extends('base')
+@section('titulo')
+  Faqs
+@endsection
 @section('bodyname')preguntas1
 
 @endsection

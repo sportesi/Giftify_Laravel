@@ -5,6 +5,7 @@
 
 @section('bodyname')productos @endsection
 @section('contenido')
+  <h1>Mis Productos</h1>
   @foreach ($products as $product)
     @if (Auth::user()->id == $product->id_user)
 

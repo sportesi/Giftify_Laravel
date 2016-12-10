@@ -1,6 +1,6 @@
 function nav(){
  var icono = document.querySelector(".ion-navicon-round");
- var navegation = document.querySelector(".main-nav1");
+ var navegation = document.querySelector(".nav-resp");
 
 function ocultar(){
 

@@ -1,9 +1,10 @@
 @extends('base')
 
-@section('titulo')Categories @endsection
+@section('titulo')Categorias @endsection
 
 @section('bodyname')categories @endsection
 @section('contenido')
+  <h1>Productos</h1>
   <div class="contenido">
     @if ($productsCategory)
 

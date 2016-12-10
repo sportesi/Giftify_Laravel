@@ -6,7 +6,9 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/productos">Productos</a></li>
                 <li><a href="/preguntas">Preguntas frecuentes</a></li>
-                <li><a href="/registro">Registrarse</a></li>
+                @if (!Auth::check())
+                  <li><a href="/registro">Registrarse</a></li>
+                @endif
                 <li><a href="#">Contacto</a></li>
             </ul>
         </article>
