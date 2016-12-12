@@ -1,9 +1,10 @@
 @extends('base')
 
-@section('titulo')Productos @endsection
+@section('titulo')Carrito @endsection
 
 @section('bodyname')productos @endsection
 @section('contenido')
+  <h1>Carrito</h1>
   <div class="carrito">
 
   @if (Session::has('cart'))
