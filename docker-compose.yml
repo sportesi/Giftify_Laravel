@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+    app:
+        build: './docker/app'
+        volumes:
+            - ./:/var/www/html
+            - ./docker/app/000-default.conf:/etc/apache2/sites-available/000-default.conf
+        ports:
+            - 80:80
+
+    mariadb:
+        image: 'mariadb:10.2.11'
+        environment:
+            - MYSQL_ROOT_PASSWORD=rootpass
+            - MYSQL_DATABASE=homestead
+            - MYSQL_USER=homestead
+            - MYSQL_PASSWORD=secret
+        ports:
+            - 3306:3306
+
+    mailhog:
+        image: 'mailhog/mailhog'
+        ports:
+            - 8025:8025
+
